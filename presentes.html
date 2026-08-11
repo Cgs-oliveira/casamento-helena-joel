@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lista de Presentes — Helena &amp; Joel</title>
+<meta name="description" content="Lista de presentes do casamento de Helena e Joel" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="gifts-page">
+
+  <header class="gifts-header">
+    <a href="index.html" class="gifts-header__back">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 4.5 8 12l7.5 7.5 1.4-1.4L10.8 12l6.1-6.1z"/></svg>
+      <span>Voltar ao convite</span>
+    </a>
+    <h1 class="gifts-header__title" id="gifts-page-title">Lista de Presentes</h1>
+    <p class="gifts-header__subtitle">Sua presença já é o maior presente. Se quiser nos ajudar com um mimo a mais, aqui vão algumas ideias :)</p>
+  </header>
+
+  <main class="gifts-main">
+    <ul class="gifts-list" id="gifts-list"></ul>
+  </main>
+
+  <!-- Modal de detalhe do presente -->
+  <div id="gift-detail" class="panel panel--small" role="dialog" aria-modal="true" aria-labelledby="gift-detail-title" hidden>
+    <div class="panel__inner">
+      <button type="button" class="panel__close" id="gift-detail-close" aria-label="Fechar">&times;</button>
+      <h3 id="gift-detail-title" class="panel__title"></h3>
+      <p id="gift-detail-desc" class="panel__subtitle"></p>
+      <img id="gift-detail-photo" class="gift-detail__photo" src="" alt="" hidden />
+      <p class="gift-detail__value" id="gift-detail-value"></p>
+      <div class="gift-detail__pix">
+        <span id="gift-detail-pixkey"></span>
+        <button type="button" class="btn-copy" id="gift-detail-copy">Copiar chave Pix</button>
+      </div>
+      <p class="gift-detail__hint">Abra o app do seu banco, escolha pagar via Pix e cole a chave acima com o valor sugerido.</p>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/gifts.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Helena &amp; Joel — Convite de Casamento</title>
+<meta name="description" content="Convite de casamento de Helena e Joel" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Tela de capa -->
+  <button type="button" id="cover" class="cover" aria-label="Toque para abrir o convite">
+    <div class="cover__card">
+      <div class="cover__ornament" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="cover__monogram">
+          <circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="2" />
+          <text x="100" y="118" text-anchor="middle" class="cover__initials">H &amp; J</text>
+        </svg>
+      </div>
+      <p class="cover__label" id="cover-label">Toque para abrir o convite</p>
+    </div>
+  </button>
+
+  <!-- Convite principal -->
+  <main id="invite" class="invite" aria-hidden="true">
+    <div class="invite__card">
+
+      <svg class="frame frame--top" viewBox="0 0 300 60" aria-hidden="true" focusable="false">
+        <path d="M10,40 C60,10 120,10 150,30 C180,10 240,10 290,40" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="10" cy="40" r="3" fill="currentColor" />
+        <circle cx="290" cy="40" r="3" fill="currentColor" />
+      </svg>
+
+      <div class="invite__photo-wrap">
+        <img id="couple-photo" class="invite__photo" src="" alt="" />
+      </div>
+
+      <p class="invite__quote" id="quote"></p>
+
+      <h1 class="invite__names">
+        <span id="bride-name"></span>
+        <span class="invite__amp" aria-hidden="true">&amp;</span>
+        <span id="groom-name"></span>
+      </h1>
+
+      <div class="invite__date">
+        <span class="invite__day" id="date-day"></span>
+        <span class="invite__date-info">
+          <span id="date-month"></span>
+          <span id="date-weekday"></span>
+        </span>
+      </div>
+
+      <div class="invite__venues">
+        <a class="venue" id="venue-ceremony" href="#" target="_blank" rel="noopener">
+          <span class="venue__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2s.5-.1.7-.2C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
+          </span>
+          <span class="venue__text">
+            <span class="venue__label" id="ceremony-label"></span>
+            <span class="venue__name" id="ceremony-name"></span>
+          </span>
+        </a>
+        <a class="venue" id="venue-reception" href="#" target="_blank" rel="noopener">
+          <span class="venue__pin" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.5 7.3 11.8.2.1.5.2.7.2s.5-.1.7-.2C13 21.5 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
+          </span>
+          <span class="venue__text">
+            <span class="venue__label" id="reception-label"></span>
+            <span class="venue__name" id="reception-name"></span>
+          </span>
+        </a>
+      </div>
+
+      <svg class="frame frame--bottom" viewBox="0 0 300 60" aria-hidden="true" focusable="false">
+        <path d="M10,20 C60,50 120,50 150,30 C180,50 240,50 290,20" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="10" cy="20" r="3" fill="currentColor" />
+        <circle cx="290" cy="20" r="3" fill="currentColor" />
+      </svg>
+
+      <nav class="actions" aria-label="Ações do convite">
+        <a href="presentes.html" class="actions__btn" id="btn-gifts">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 7h-2.2c.1-.3.2-.7.2-1 0-1.7-1.3-3-3-3-1.3 0-2.4.8-3 2-.6-1.2-1.7-2-3-2-1.7 0-3 1.3-3 3 0 .3.1.7.2 1H4c-.6 0-1 .4-1 1v3c0 .6.4 1 1 1v8c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-8c.6 0 1-.4 1-1V8c0-.6-.4-1-1-1zM14 5c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zm-4 0c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1zM6 19v-7h5v7H6zm12 0h-5v-7h5v7z"/></svg>
+          <span>Presentear</span>
+        </a>
+        <button type="button" class="actions__btn" id="btn-rsvp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6 2 11c0 2.4 1 4.6 2.7 6.2L4 22l5-2.1c1 .3 2 .4 3 .4 5.5 0 10-4 10-9s-4.5-9-10-9z"/></svg>
+          <span>Confirmar presença</span>
+        </button>
+      </nav>
+    </div>
+  </main>
+
+  <!-- Modal de RSVP -->
+  <div id="rsvp-modal" class="panel panel--small" role="dialog" aria-modal="true" aria-labelledby="rsvp-title" hidden>
+    <div class="panel__inner">
+      <button type="button" class="panel__close" id="rsvp-close" aria-label="Fechar confirmação de presença">&times;</button>
+      <h2 id="rsvp-title" class="panel__title">Confirmar Presença</h2>
+      <p class="panel__subtitle">Nos diga seu nome para confirmarmos pelo WhatsApp</p>
+      <form id="rsvp-form" class="rsvp-form">
+        <label for="rsvp-name" class="rsvp-form__label">Seu nome</label>
+        <input type="text" id="rsvp-name" name="rsvp-name" class="rsvp-form__input" placeholder="Digite seu nome" required autocomplete="name" />
+        <button type="submit" class="rsvp-form__submit">
+          Enviar confirmação via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
