@@ -23,6 +23,9 @@
     const coverLabel = document.getElementById("cover-label");
     if (cfg.cover && cfg.cover.label) coverLabel.textContent = cfg.cover.label;
 
+    document.getElementById("monogram-bride").textContent = cfg.couple.bride.charAt(0).toUpperCase();
+    document.getElementById("monogram-groom").textContent = cfg.couple.groom.charAt(0).toUpperCase();
+
     document.title = `${cfg.couple.bride} & ${cfg.couple.groom} — Convite de Casamento`;
   }
 
