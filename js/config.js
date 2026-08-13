@@ -35,7 +35,7 @@ const WEDDING_CONFIG = {
   },
 
   photo: {
-    src: "img/ImagemTeste.jpg",
+    src: "img/ImgCasal.jpeg",
     alt: "Foto do casal Helena e Joel",
   },
 
