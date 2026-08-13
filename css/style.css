@@ -573,23 +573,28 @@ button {
 
 .gift-detail__pix {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.6rem;
   background: var(--color-primary-light);
   border-radius: 12px;
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
-  word-break: break-all;
+}
+
+.gift-detail__pix span {
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 .btn-copy {
   flex-shrink: 0;
+  width: 100%;
   background: var(--color-primary);
   color: #fff;
   border: none;
   border-radius: var(--radius-round);
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   font-size: 0.85rem;
 }
 
