@@ -56,7 +56,18 @@
     descEl.textContent = gift.description || "";
     descEl.hidden = !gift.description;
     document.getElementById("gift-detail-value").textContent = `Valor sugerido: ${formatCurrency(gift.value)}`;
-    document.getElementById("gift-detail-pixkey").textContent = cfg.pix.key;
+
+    // Se o item tem um código Pix "copia e cola" próprio (já com o valor embutido), usa ele.
+    // Caso contrário, cai de volta para a chave Pix genérica configurada em cfg.pix.key.
+    const hasOwnCode = Boolean(gift.pixCode);
+    const pixToCopy = hasOwnCode ? gift.pixCode : cfg.pix.key;
+
+    const pixKeyEl = document.getElementById("gift-detail-pixkey");
+    pixKeyEl.textContent = hasOwnCode ? "Código Pix copia e cola gerado para este item" : cfg.pix.key;
+    pixKeyEl.title = pixToCopy;
+
+    const copyBtn = document.getElementById("gift-detail-copy");
+    copyBtn.textContent = hasOwnCode ? "Copiar código Pix" : "Copiar chave Pix";
 
     const photoImg = document.getElementById("gift-detail-photo");
     if (gift.image) {
@@ -68,8 +79,7 @@
       photoImg.hidden = true;
     }
 
-    const copyBtn = document.getElementById("gift-detail-copy");
-    copyBtn.onclick = () => copyToClipboard(cfg.pix.key);
+    copyBtn.onclick = () => copyToClipboard(pixToCopy);
 
     openPanel(document.getElementById("gift-detail"));
   }
